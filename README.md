@@ -212,17 +212,3 @@ It’s important to be aware of the limitations associated with this Terraform c
 ## 🙌 Contributing
 Contributions to this project are welcome! If you find any issues or have ideas for improvements, feel free to submit a pull request or open an issue on GitHub. 🤝
 
-
-
-
-This comprehensive documentation provides you with all the necessary information to understand, configure, and deploy the Terraform infrastructure code. Happy provisioning! 😊🚀
-
-We appreciate you taking the time to read through this documentation. We hope that it has provided you with valuable insights and guidance for working with our codebase. If you have any further questions or need assistance, don't hesitate to reach out to our support team.
-
-Your feedback is important to us, so please feel free to share any suggestions, issues, or feature requests you may have.
-
-Once again, thank you for choosing my code and happy coding!
-
-Best regards, Roee Ninyo
-
-
