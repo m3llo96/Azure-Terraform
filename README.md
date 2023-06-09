@@ -1,4 +1,6 @@
+
 # Terraform Azure Virtual Machine Deployment
+
 
 This Terraform code allows you to provision a comprehensive set of Azure resources within a specified resource group. The resources include a resource group, virtual network, subnet, network security group, public IP address, network interface, and a Linux virtual machine. By following the instructions below, you will be able to set up your Azure infrastructure easily and efficiently. 🏗️💻🌐
 
@@ -26,6 +28,39 @@ The Terraform code provided in  `main.tf`  defines the following Azure resources
 -   **Public IP Address**: An IP address that can be accessed over the internet.
 -   **Network Interface**: A network adapter for the virtual machine, enabling communication with other resources.
 -   **Linux Virtual Machine**: A virtual machine running the Ubuntu Server operating system, serving as a scalable and flexible compute resource.
+
+
+	## 📁 File Structure
+
+	To provide a better understanding of the project's file structure, here is an overview of the files included in this repository:
+
+	- 📁 `.terraform.lock.hcl`: This file contains the version constraints of the provider plugins used in the project.
+	- 📁 `customdata.tpl`: A template file that allows you to inject custom data into the virtual machine during provisioning.
+	- 🔑 `id_rsa`: The SSH private key file used for Linux VM authentication.
+	- 🔑 `id_rsa.pub`: The corresponding SSH public key file for the private key.
+	to the Linux virtual machine.
+	- 📄 `main.tf`: The main Terraform configuration file that defines the Azure resources to be provisioned.
+	- 📄 `terraform.tfstate`: The state file that keeps track of the actual infrastructure state created by Terraform. Do not modify this file manually.
+	- 📄 `terraform.tfstate.backup`: A backup of the previous state file.
+	- 📄 `terraform.tfvars`: The variable file where you can provide input values for the Terraform variables used in the configuration.
+	- 📄 `variables.tf`: The file that defines the input variables used in the Terraform code.
+	- 📁 `windows-ssh-script.tpl`: A template file that provides a script for setting up SSH access to Windows virtual machines.
+	-  📁 `linux-ssh-script.tpl`: A template file that provides a script for setting up SSH access 
+
+
+## 📊 Data Queries
+In addition to resource provisioning, the Terraform code includes data queries to retrieve information about the created resources. The following data sources are queried:
+
+-   `azurerm_resource_group.RG`: Retrieves information about the resource group.
+-   `azurerm_virtual_machine.vm`: Retrieves information about the virtual machine
+
+
+
+## 📤 Outputs
+The Terraform code provides the following outputs:
+
+-   **resource_group_data**: A map of attributes for the created resource group, including ID, name, location, and tags.
+-   **virtual_machine_data**: A map of attributes for the created virtual machine, including ID, identity, private IP address, public IP address, and other relevant information.
 
 
 
@@ -77,43 +112,6 @@ terraform apply
 
 10. Access the VM: Once the deployment is complete, you can access the VM using the specified username and password or SSH key.
 
-
-
-
-### 🔍 Data Queries
-
-In addition to resource provisioning, the Terraform code includes data queries to retrieve information about the created resources. The following data sources are queried:
-
--   `azurerm_resource_group.RG`: Retrieves information about the resource group.
--   `azurerm_virtual_machine.vm`: Retrieves information about the virtual machine
-
-
-
-### 📤 Outputs
-
-The Terraform code provides the following outputs:
-
--   **resource_group_data**: A map of attributes for the created resource group, including ID, name, location, and tags.
--   **virtual_machine_data**: A map of attributes for the created virtual machine, including ID, identity, private IP address, public IP address, and other relevant information.
-
-
-
-	## 📁 File Structure
-
-	To provide a better understanding of the project's file structure, here is an overview of the files included in this repository:
-
-	- 📁 `.terraform.lock.hcl`: This file contains the version constraints of the provider plugins used in the project.
-	- 📁 `customdata.tpl`: A template file that allows you to inject custom data into the virtual machine during provisioning.
-	- 🔑 `id_rsa`: The SSH private key file used for Linux VM authentication.
-	- 🔑 `id_rsa.pub`: The corresponding SSH public key file for the private key.
-	to the Linux virtual machine.
-	- 📄 `main.tf`: The main Terraform configuration file that defines the Azure resources to be provisioned.
-	- 📄 `terraform.tfstate`: The state file that keeps track of the actual infrastructure state created by Terraform. Do not modify this file manually.
-	- 📄 `terraform.tfstate.backup`: A backup of the previous state file.
-	- 📄 `terraform.tfvars`: The variable file where you can provide input values for the Terraform variables used in the configuration.
-	- 📄 `variables.tf`: The file that defines the input variables used in the Terraform code.
-	- 📁 `windows-ssh-script.tpl`: A template file that provides a script for setting up SSH access to Windows virtual machines.
-	-  📁 `linux-ssh-script.tpl`: A template file that provides a script for setting up SSH access 
 
 
 ## 🧪 Testing
