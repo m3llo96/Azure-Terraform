@@ -197,10 +197,6 @@ To further enhance your understanding of Terraform and Azure infrastructure prov
 -   **Configuration Customization**: Review the Terraform code and modify it according to your specific requirements before running Terraform commands. Customize resource names, locations, sizes, and other properties as needed.
 -   **Review Resource Costs**: Keep in mind that provisioning Azure resources may incur costs. Monitor your Azure usage and billing to avoid any unexpected charges.
 
-Congratulations! You have successfully provisioned Azure resources using Terraform. Feel free to modify and enhance this documentation to fit your unique requirements. If you encounter any issues or have further questions, refer to the Terraform documentation ([https://www.terraform.io/docs/index.html](https://www.terraform.io/docs/index.html)) or seek assistance from the Terraform community. Happy provisioning! ✨🎉🌟
-
-
-
 ## ⚠️ Limitations
 
 It’s important to be aware of the limitations associated with this Terraform configuration. Take note of the following limitation:
