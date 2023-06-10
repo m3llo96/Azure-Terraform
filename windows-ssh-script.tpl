@@ -1,4 +1,4 @@
-add-content -path c:/users/roee/.ssh/config -value @'
+add-content -path c:/users/Username/.ssh/config -value @'
 
 Host ${hostname}
   HostName ${hostname}
